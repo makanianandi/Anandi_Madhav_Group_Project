@@ -14,6 +14,12 @@
         android:theme="@style/Theme.MyApplication"
         tools:targetApi="31">
         <activity
+            android:name=".payment"
+            android:exported="false" />
+        <activity
+            android:name=".productDetails"
+            android:exported="false" />
+        <activity
             android:name=".home"
             android:exported="false" />
         <activity

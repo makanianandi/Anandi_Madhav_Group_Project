@@ -11,6 +11,8 @@ import com.google.firebase.storage.FirebaseStorage
 
 class ProductAdapter(public val product: FirebaseRecyclerOptions<product>):FirebaseRecyclerAdapter<product,ProductAdapter.ProductHolder>(product) {
 
+    var onItemClick : ((product) -> Unit)? = null
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ProductHolder {
         val inflater = LayoutInflater.from(parent.context)
         return ProductHolder(inflater, parent)
@@ -21,6 +23,10 @@ class ProductAdapter(public val product: FirebaseRecyclerOptions<product>):Fireb
         holder.txtProductName.text = model.name
         holder.txtProductDesc.text = model.desc
         holder.txtProductPrice.text = model.price
+
+        holder.itemView.setOnClickListener{
+//        onItemClick?.invoke(product)
+        }
     }
     class ProductHolder(inflater: LayoutInflater, parent: ViewGroup)
         : RecyclerView.ViewHolder(inflater.inflate(R.layout.layout_row_product, parent, false))
