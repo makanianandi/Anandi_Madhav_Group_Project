@@ -13,7 +13,8 @@
         android:background="@color/purple_200"
         tools:context=".paymentDetails">
 
-<!--        this is card view-->
+<!--        this is not a card view-->
+
         <androidx.cardview.widget.CardView
             android:id="@+id/cardView4"
             android:layout_width="match_parent"

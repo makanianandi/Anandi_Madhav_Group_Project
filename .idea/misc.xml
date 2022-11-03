@@ -12,10 +12,11 @@
         <entry key="..\:/Anandi/Conestoga College/Sem 3/Advance Mobile Application/Project 1/Anandi_Madhav_Group_Project/app/src/main/res/layout/activity_register.xml" value="0.1" />
         <entry key="..\:/Anandi/Conestoga College/Sem 3/Advance Mobile Application/Project 1/Anandi_Madhav_Group_Project/app/src/main/res/layout/forgotpassword.xml" value="0.1" />
         <entry key="..\:/Anandi/Conestoga College/Sem 3/Advance Mobile Application/Project 1/Anandi_Madhav_Group_Project/app/src/main/res/layout/layout_row_product.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_payment.xml" value="0.36666666666666664" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="11" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">
