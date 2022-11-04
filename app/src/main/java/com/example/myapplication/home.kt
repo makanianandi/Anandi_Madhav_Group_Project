@@ -19,7 +19,7 @@ class home : AppCompatActivity() {
         val product = FirebaseRecyclerOptions.Builder<product>().setQuery(query, product::class.java).build()
 //        Log.e("Personal Data", "onCreate: ${product.snapshots.size}")
 
-        adapter = ProductAdapter(product)
+        adapter = ProductAdapter(applicationContext,product)
 
         val rView : RecyclerView = findViewById(R.id.rView)
         rView.layoutManager = LinearLayoutManager(this)
