@@ -45,6 +45,14 @@ class register : AppCompatActivity() {
         var password = pass.text.toString();
         var conPass = conpass.text.toString();
 
+//        Below This is Madhav's Validation Part
+//
+//        if(email.toString().isEmpty() || password.toString().isEmpty() || conPass.toString().isEmpty()){
+//            Toast.makeText(this,"Fields Should Not Be Empty!!!",Toast.LENGTH_SHORT).show();
+//        }
+
+
+//        Below This is Anandi's Part
         if(email.isNotEmpty() && password.isNotEmpty() && conPass.isNotEmpty())
         {
             if(password.equals(conPass))
@@ -65,7 +73,7 @@ class register : AppCompatActivity() {
             }
             else
             {
-                Toast.makeText(this,"Password s not match",Toast.LENGTH_LONG).show();
+                Toast.makeText(this,"Password does not match",Toast.LENGTH_LONG).show();
             }
         }
         else

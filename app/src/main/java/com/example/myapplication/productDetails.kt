@@ -1,6 +1,8 @@
 package com.example.myapplication
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
@@ -26,6 +28,11 @@ class productDetails : AppCompatActivity() {
         txtProDetails!!.text = intent.getStringExtra("proDesc")
         Glide.with(applicationContext).load(intent.getStringExtra("proImg")).into(imgProductFullView!!)
 
+        val btnAddToCart = findViewById<Button>(R.id.btnAddToCart)
+        btnAddToCart.setOnClickListener {
+            var intent: Intent = Intent(applicationContext, payment::class.java)
+            startActivity(intent)
+        }
 
     }
 }
