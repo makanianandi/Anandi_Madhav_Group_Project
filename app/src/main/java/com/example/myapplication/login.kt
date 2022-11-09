@@ -39,14 +39,19 @@ class login : AppCompatActivity() {
         val email=emailAdd.text.toString();
         val password=pass.text.toString()
 
-        auth.signInWithEmailAndPassword(email,password).addOnCompleteListener { task ->
-            if(task.isSuccessful){
-                val intent= Intent(this,home::class.java)
-                startActivity(intent)
-                finish()
+        if(email.isNotEmpty() && password.isNotEmpty()){
+            auth.signInWithEmailAndPassword(email,password).addOnCompleteListener { task ->
+                if(task.isSuccessful){
+                    val intent= Intent(this,home::class.java)
+                    startActivity(intent)
+                    finish()
+                }
+            }.addOnFailureListener { exception ->
+                Toast.makeText(applicationContext,exception.localizedMessage, Toast.LENGTH_LONG).show()
             }
-        }.addOnFailureListener { exception ->
-            Toast.makeText(applicationContext,exception.localizedMessage, Toast.LENGTH_LONG).show()
+        } else {
+            Toast.makeText(this,"Empty fields are not allowed",Toast.LENGTH_LONG).show();
         }
+
     }
 }
