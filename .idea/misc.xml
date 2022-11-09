@@ -17,7 +17,7 @@
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.5635416666666667" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.36666666666666664" />
         <entry key="app/src/main/res/layout/activity_payment.xml" value="0.25" />
-        <entry key="app/src/main/res/layout/activity_product_details.xml" value="0.3987341772151899" />
+        <entry key="app/src/main/res/layout/activity_product_details.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_register.xml" value="0.22476908365885412" />
         <entry key="app/src/main/res/layout/activity_successful.xml" value="0.20795898437500002" />
       </map>
