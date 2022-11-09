@@ -27,6 +27,10 @@ class login : AppCompatActivity() {
             forgotPass(view)
         }
     }
+    override fun onBackPressed() {
+        val intent= Intent(this,register::class.java)
+        startActivity(intent)
+    }
     fun forgotPass(view: View) {
         val intent= Intent(this,forgotPassword::class.java)
         startActivity(intent)

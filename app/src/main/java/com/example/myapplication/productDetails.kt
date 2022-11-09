@@ -68,6 +68,10 @@ class productDetails : AppCompatActivity() {
         }
 
     }
+    override fun onBackPressed() {
+        val intent= Intent(this,home::class.java)
+        startActivity(intent)
+    }
     private fun displayQuantity() {
         txtProDetailsQty!!.setText(quantity.toString())
     }

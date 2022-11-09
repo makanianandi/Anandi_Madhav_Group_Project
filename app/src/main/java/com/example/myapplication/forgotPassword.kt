@@ -23,6 +23,10 @@ class forgotPassword : AppCompatActivity() {
 
         btnresetpass.setOnClickListener(View.OnClickListener { resetPassword() })
     }
+    override fun onBackPressed() {
+        val intent= Intent(this,login::class.java)
+        startActivity(intent)
+    }
     private fun resetPassword() {
         var txtemail = findViewById<TextInputEditText>(R.id.txtForgotEmail)
         var email = txtemail!!.text.toString()

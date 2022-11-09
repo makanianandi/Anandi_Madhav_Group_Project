@@ -70,4 +70,8 @@ class payment : AppCompatActivity() {
             }
         }
     }
+    override fun onBackPressed() {
+        val intent= Intent(this,productDetails::class.java)
+        startActivity(intent)
+    }
 }

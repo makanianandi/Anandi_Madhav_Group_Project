@@ -1,12 +1,12 @@
 package com.example.myapplication
 
-import androidx.appcompat.app.AppCompatActivity
+import android.content.Intent
 import android.os.Bundle
-import android.util.Log
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.google.firebase.database.FirebaseDatabase
 import com.firebase.ui.database.FirebaseRecyclerOptions
+import com.google.firebase.database.FirebaseDatabase
 
 class home : AppCompatActivity() {
     private var adapter: ProductAdapter? = null
@@ -24,6 +24,12 @@ class home : AppCompatActivity() {
         val rView : RecyclerView = findViewById(R.id.rView)
         rView.layoutManager = LinearLayoutManager(this)
         rView.adapter = adapter
+    }
+    override fun onBackPressed() {
+        val a = Intent(Intent.ACTION_MAIN)
+        a.addCategory(Intent.CATEGORY_HOME)
+        a.flags = Intent.FLAG_ACTIVITY_NEW_TASK
+        startActivity(a)
     }
     override fun onStart() {
         super.onStart()

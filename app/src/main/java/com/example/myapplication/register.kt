@@ -13,7 +13,6 @@ import com.google.firebase.auth.FirebaseAuth
 class register : AppCompatActivity() {
     private lateinit var auth: FirebaseAuth;
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register)
@@ -28,6 +27,11 @@ class register : AppCompatActivity() {
         alreadyAcc.setOnClickListener { view ->
             openlogin(view)
         }
+    }
+
+    override fun onBackPressed() {
+        val intent= Intent(this,MainActivity::class.java)
+        startActivity(intent)
     }
     fun openlogin(view: View)
     {
