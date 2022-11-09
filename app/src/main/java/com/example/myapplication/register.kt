@@ -31,7 +31,6 @@ class register : AppCompatActivity() {
     }
     fun openlogin(view: View)
     {
-        Toast.makeText(this,"Login Already clicked",Toast.LENGTH_LONG).show();
         val intent= Intent(this,login::class.java)
         startActivity(intent)
     }
