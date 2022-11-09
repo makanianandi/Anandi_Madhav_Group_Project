@@ -5,14 +5,14 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 
-class payment : AppCompatActivity() {
+class activity_successful : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_payment)
+        setContentView(R.layout.activity_successful)
 
-        val btnPayNow = findViewById<Button>(R.id.btnPayNow)
-        btnPayNow.setOnClickListener {
-            var intent: Intent = Intent(applicationContext, activity_successful::class.java)
+        val btncontinueshop = findViewById<Button>(R.id.btncontinueshop)
+        btncontinueshop.setOnClickListener {
+            var intent: Intent = Intent(applicationContext, home::class.java)
             startActivity(intent)
         }
     }
