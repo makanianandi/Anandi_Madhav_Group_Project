@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.text.isDigitsOnly
 import com.google.android.material.textfield.TextInputEditText
 
 class payment : AppCompatActivity() {
@@ -25,6 +26,7 @@ class payment : AppCompatActivity() {
         setContentView(R.layout.activity_payment)
 
         val btnPayNow = findViewById<Button>(R.id.btnPayNow)
+        val cardnumpattern = "[0-9]{10}"
 
         personfullname = findViewById<TextInputEditText>(R.id.personfullname)
         txtProvince = findViewById<TextInputEditText>(R.id.txtProvince)
@@ -39,7 +41,11 @@ class payment : AppCompatActivity() {
         btnPayNow.setOnClickListener {
             if (cardnumber!!.getText().toString().trim { it <= ' ' }.isEmpty()) {
                 cardnumber!!.requestFocus()
-                Toast.makeText(this, "Enter Card Number!", Toast.LENGTH_LONG).show()
+                Toast.makeText(this, "Enter Card Number!", Toast.LENGTH_LONG).show();
+
+            } else if(!(cardnumber!!.getText().toString().trim { it <= ' ' }.isDigitsOnly()))
+            {
+                Toast.makeText(this, "Please enter only digits!", Toast.LENGTH_LONG).show();
             } else if (personfullname!!.getText().toString().trim { it <= ' ' }.isEmpty()) {
                 personfullname!!.requestFocus()
                 Toast.makeText(this, "Enter Full Name!", Toast.LENGTH_LONG).show()
@@ -49,12 +55,18 @@ class payment : AppCompatActivity() {
             } else if (cvvnumber!!.getText().toString().trim { it <= ' ' }.isEmpty()) {
                 cvvnumber!!.requestFocus()
                 Toast.makeText(this, "Enter CVV Number!", Toast.LENGTH_LONG).show()
+            } else if (!(cvvnumber!!.getText().toString().trim { it <= ' ' }.isDigitsOnly())) {
+                cvvnumber!!.requestFocus()
+                Toast.makeText(this, "Enter CVV Number only digit!", Toast.LENGTH_LONG).show()
             } else if (addressstreet1!!.getText().toString().trim { it <= ' ' }.isEmpty()) {
                 addressstreet1!!.requestFocus()
-                Toast.makeText(this, "Enter Street Line 1!", Toast.LENGTH_LONG).show()
+                Toast.makeText(this, "Enter Street name!", Toast.LENGTH_LONG).show()
             } else if (addressstreet2!!.getText().toString().trim { it <= ' ' }.isEmpty()) {
                 addressstreet2!!.requestFocus()
-                Toast.makeText(this, "Enter Street Line 2!", Toast.LENGTH_LONG).show()
+                Toast.makeText(this, "Enter Street number!", Toast.LENGTH_LONG).show()
+            } else if (!(addressstreet2!!.getText().toString().trim { it <= ' ' }.isDigitsOnly())) {
+                addressstreet2!!.requestFocus()
+                Toast.makeText(this, "Enter Street number only digit!", Toast.LENGTH_LONG).show()
             } else if (addresscity!!.getText().toString().trim { it <= ' ' }.isEmpty()) {
                 addresscity!!.requestFocus()
                 Toast.makeText(this, "Enter Your City!", Toast.LENGTH_LONG).show()
@@ -64,7 +76,7 @@ class payment : AppCompatActivity() {
             } else if (txtPincode!!.getText().toString().trim { it <= ' ' }.isEmpty()) {
                 txtPincode!!.requestFocus()
                 Toast.makeText(this, "Enter Pincode!", Toast.LENGTH_LONG).show()
-            }  else {
+            } else {
                 var intent: Intent = Intent(applicationContext, activity_successful::class.java)
                 startActivity(intent)
             }

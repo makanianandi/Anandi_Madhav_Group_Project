@@ -20,7 +20,7 @@
             android:textSize="36sp"
             android:layout_marginTop="50dp"
             android:fontFamily="sans-serif-smallcaps"
-            android:textColor="@color/teal_700"
+            android:textColor="#E25C6C"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
