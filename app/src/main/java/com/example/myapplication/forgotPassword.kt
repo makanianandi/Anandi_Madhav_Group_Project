@@ -23,15 +23,12 @@ class forgotPassword : AppCompatActivity() {
 
         btnresetpass.setOnClickListener(View.OnClickListener { resetPassword() })
     }
-    private fun resetPassword() : Boolean{
+    private fun resetPassword() {
         var txtemail = findViewById<TextInputEditText>(R.id.txtForgotEmail)
         var email = txtemail!!.text.toString()
 
+        if(email.isNotEmpty()){
             mAuth!!.sendPasswordResetEmail(email).addOnCompleteListener { task ->
-                if (txtemail!!.length()<1){
-                    txtemail!!.error="This Field is Required"
-//                    Toast.makeText(this@forgotPassword,"Please Enter Valid Email ID!",Toast.LENGTH_LONG).show()
-                }
                 if (task.isSuccessful) {
                     Toast.makeText(
                         this@forgotPassword,
@@ -42,11 +39,13 @@ class forgotPassword : AppCompatActivity() {
                 } else {
                     Toast.makeText(
                         this@forgotPassword,
-                        "Try Again ! Something wrong happned!",
+                        "Try Again ! Something wrong happened!",
                         Toast.LENGTH_LONG
                     ).show()
                 }
             }
-        return true
+        } else {
+            Toast.makeText(this,"Please Enter Email ID",Toast.LENGTH_LONG).show();
         }
     }
+}
