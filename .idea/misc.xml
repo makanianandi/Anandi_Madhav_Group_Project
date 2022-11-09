@@ -14,8 +14,9 @@
         <entry key="..\:/Anandi/Conestoga College/Sem 3/Advance Mobile Application/Project 1/Anandi_Madhav_Group_Project/app/src/main/res/layout/layout_row_product.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_forgot_password.xml" value="0.36666666666666664" />
         <entry key="app/src/main/res/layout/activity_home.xml" value="0.36666666666666664" />
+        <entry key="app/src/main/res/layout/activity_login.xml" value="0.5635416666666667" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.36666666666666664" />
-        <entry key="app/src/main/res/layout/activity_payment.xml" value="0.335" />
+        <entry key="app/src/main/res/layout/activity_payment.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_product_details.xml" value="0.25679347826086957" />
         <entry key="app/src/main/res/layout/activity_register.xml" value="0.22476908365885412" />
         <entry key="app/src/main/res/layout/activity_successful.xml" value="0.20795898437500002" />
