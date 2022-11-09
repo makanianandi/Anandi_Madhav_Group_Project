@@ -66,6 +66,21 @@
                     app:layout_constraintVertical_bias="0.505" />
 
                 <TextView
+                    android:id="@+id/dollarsign"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="$"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.046"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.505" />
+
+                <TextView
                     android:id="@+id/txtProDetailsPrice"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -75,8 +90,8 @@
                     android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.046"
-                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toEndOf="@id/dollarsign"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintVertical_bias="0.505" />
 
@@ -188,9 +203,10 @@
                     android:layout_height="52dp"
                     android:text=""
                     android:textSize="14sp"
+                    android:layout_marginLeft="70dp"
+                    android:layout_marginRight="20dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.516"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintVertical_bias="0.213" />
@@ -201,9 +217,10 @@
                     android:layout_height="18dp"
                     android:text="Semi-Fit"
                     android:textSize="14sp"
+                    android:layout_marginLeft="70dp"
+                    android:layout_marginRight="20dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.551"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintVertical_bias="0.534" />
@@ -214,9 +231,10 @@
                     android:layout_height="18dp"
                     android:text="The Model is wearing a size S"
                     android:textSize="14sp"
+                    android:layout_marginLeft="70dp"
+                    android:layout_marginRight="20dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.551"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintVertical_bias="0.603" />
@@ -227,9 +245,10 @@
                     android:layout_height="18dp"
                     android:text="Material:Poly Chiffon"
                     android:textSize="14sp"
+                    android:layout_marginLeft="70dp"
+                    android:layout_marginRight="20dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.551"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintVertical_bias="0.829" />
@@ -240,9 +259,10 @@
                     android:layout_height="18dp"
                     android:text="Hand Wash"
                     android:textSize="14sp"
+                    android:layout_marginLeft="70dp"
+                    android:layout_marginRight="20dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.551"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintVertical_bias="0.897" />

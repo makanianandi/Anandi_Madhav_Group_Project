@@ -49,7 +49,7 @@ class productDetails : AppCompatActivity() {
             if (quantity == 1) {
                 Toast.makeText(
                     this,
-                    "The Quantity Should be atleast 1",
+                    "The Quantity Must not be less than 1",
                     Toast.LENGTH_SHORT
                 ).show()
             } else {
