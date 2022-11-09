@@ -56,7 +56,6 @@ class register : AppCompatActivity() {
                 auth.createUserWithEmailAndPassword(email,password).addOnCompleteListener{
                     if(it.isSuccessful)
                     {
-                        Toast.makeText(this, "You clicked me.", Toast.LENGTH_LONG).show();
                         Toast.makeText(this,"Register Successfully",Toast.LENGTH_LONG).show()
                         val intent= Intent(this,login::class.java)
                         startActivity(intent)
